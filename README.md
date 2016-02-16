@@ -1,2 +1,2 @@
 # Bebop
-just for practice, make no sence
+This is my assignment in Coursera

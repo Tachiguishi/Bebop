@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<title>Guseeing Game</title>
+<head>
+</head>
+<body onload="do_game()">
+	<script type="text/javascript">
+	var colors=["aqua","black","chocolate","darkOrchid","gold","lime","navy","olive","pink","red","silver","tomato","yellow"];
+	var target="";	//target color value;
+	var count = 0;	//the times the user has guessed
+
+	function do_game(){
+		var finished = false;	//the sige of game over
+		var guess_input_text = "";	//the text what the user guessing
+		var target_index = Math.floor(Math.random()*colors.length);
+
+		target = colors[target_index];	//get the target color
+		alert(target);
+
+		while(!finished){
+			guess_input_text = prompt("I am thinking one of these colors:\n\n"+
+                            	colors.join(", ")+"\n\nWhat color am I thinking of?");
+			count++;
+			if(guess_input_text.toLowerCase() == target){
+				finished = true;
+				console.log(count);
+				//var myBody=document.getElementsByTagName("body")[0];
+				//myBody.style.background=target;
+			}
+		}
+	}
+	</script>
+</body>
+</html>
